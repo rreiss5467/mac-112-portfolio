@@ -17,6 +17,11 @@ book:
       - activities/activity-02.qmd
       - activities/activity-03.qmd
     
+    - part: journal
+      chapters: 
+        - journal/9_4_24.qmd
+        - journal/9_6_24.qmd
+    
     - part: notes/README.qmd
       chapters: 
       - notes/note-01.qmd

@@ -20,16 +20,6 @@
     ]
   },
   {
-    "objectID": "notes/README.html",
-    "href": "notes/README.html",
-    "title": "Notes",
-    "section": "",
-    "text": "All notes live here.",
-    "crumbs": [
-      "Notes"
-    ]
-  },
-  {
     "objectID": "activities/activity-01.html",
     "href": "activities/activity-01.html",
     "title": "1  Activity 01",
@@ -38,6 +28,38 @@
     "crumbs": [
       "Activities",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Activity 01</span>"
+    ]
+  },
+  {
+    "objectID": "journal/9_4_24.html",
+    "href": "journal/9_4_24.html",
+    "title": "4  9-4 Entry",
+    "section": "",
+    "text": "4.1 I should’ve started with this course instead of STAT 155…I’m starting the semester learning what code means, instead of how to use it.",
+    "crumbs": [
+      "journal",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>9-4 Entry</span>"
+    ]
+  },
+  {
+    "objectID": "journal/9_6_24.html",
+    "href": "journal/9_6_24.html",
+    "title": "5  9-6-24 Entry",
+    "section": "",
+    "text": "Cmd+shift+I is a shortcut for new R code in qmd Unclear what “” does in qmd… “!” takes it from url–&gt;image “[]” becomes the caption for the image Make sure to leave spaces between code (e.g. “x = 100” as opposed to “x=100”) “jo_scare”= “snake case”\nWhy “qmd”? markdown(formats, but doesn’t run code)–&gt;Rmarkdown(runs R code)–&gt;Quarto Markdown (works with multiple coding languages–Python, Java, and Julia)",
+    "crumbs": [
+      "journal",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>9-6-24 Entry</span>"
+    ]
+  },
+  {
+    "objectID": "notes/README.html",
+    "href": "notes/README.html",
+    "title": "Notes",
+    "section": "",
+    "text": "All notes live here.",
+    "crumbs": [
+      "Notes"
     ]
   }
 ]
