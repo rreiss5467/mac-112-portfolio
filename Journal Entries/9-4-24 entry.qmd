@@ -1,0 +1,6 @@
+---
+title: "9-4 Entry"
+editor: visual
+---
+I should’ve started with this course instead of STAT 155…I’m starting the semester learning what code means, instead of how to use it.
+---
