@@ -26,6 +26,10 @@ book:
       chapters: 
       - notes/note-01.qmd
       - notes/note-02.qmd
+      
+    - part: homework
+      chapters: 
+        - homework/homework_01.qmd
 
 format:
   html:
