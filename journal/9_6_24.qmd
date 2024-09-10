@@ -2,14 +2,9 @@
 title: "9-6-24 Entry"
 editor: visual
 ---
-Cmd+shift+I is a shortcut for new R code in qmd
-Unclear what “![](url)” does in qmd…
-“!” takes it from url–>image
-“[]” becomes the caption for the image
-Make sure to leave spaces between code (e.g. "x = 100" as opposed to "x=100")
-“jo_scare”= “snake case” 
 
-Why “qmd”?
-markdown(formats, but doesn’t run code)–>Rmarkdown(runs R code)–>Quarto Markdown (works with multiple coding languages–Python, Java, and Julia)
+Cmd+shift+I is a shortcut for new R code in qmd Unclear what “![](url)” does in qmd… “!” takes it from url–\>image “\[\]” becomes the caption for the image Make sure to leave spaces between code (e.g. "x = 100" as opposed to "x=100") “jo_scare”= “snake case”
 
----
+Why “qmd”? markdown(formats, but doesn’t run code)–\>Rmarkdown(runs R code)–\>Quarto Markdown (works with multiple coding languages–Python, Java, and Julia)
+
+------------------------------------------------------------------------

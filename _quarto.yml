@@ -21,15 +21,14 @@ book:
       chapters: 
         - journal/9_4_24.qmd
         - journal/9_6_24.qmd
+        - journal/9_10_24.qmd
     
     - part: notes/README.qmd
       chapters: 
       - notes/note-01.qmd
       - notes/note-02.qmd
       
-    - part: homework
-      chapters: 
-        - homework/homework_01.qmd
+
 
 format:
   html:

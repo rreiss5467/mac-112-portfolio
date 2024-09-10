@@ -53,6 +53,28 @@
     ]
   },
   {
+    "objectID": "journal/9_10_24.html",
+    "href": "journal/9_10_24.html",
+    "title": "6  9-10-24 entry",
+    "section": "",
+    "text": "6.1 Notes\n“gg”=“grammar of graphics”–e.g. “ggplot”",
+    "crumbs": [
+      "journal",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>9-10-24 entry</span>"
+    ]
+  },
+  {
+    "objectID": "journal/9_10_24.html#notes",
+    "href": "journal/9_10_24.html#notes",
+    "title": "6  9-10-24 entry",
+    "section": "",
+    "text": "a frame: variables/features that define the axes of the canvas\na layer: geometric elements added to the canvas to represent data points/patterns (e.g. lines, points)\n\nsometimes called “geoms”/“glyphs” (like hieroglyph)\n\nscales: aesthetics added to geom elements (e.g. color, shape)\nfaceting: splitting up of data into subplots/facets to examine groups w/in the data\na theme: controls of finer points of plot aesthetics (e.g. font type, background, etc)",
+    "crumbs": [
+      "journal",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>9-10-24 entry</span>"
+    ]
+  },
+  {
     "objectID": "notes/README.html",
     "href": "notes/README.html",
     "title": "Notes",
@@ -60,17 +82,6 @@
     "text": "All notes live here.",
     "crumbs": [
       "Notes"
-    ]
-  },
-  {
-    "objectID": "homework/homework_01.html",
-    "href": "homework/homework_01.html",
-    "title": "",
-    "section": "",
-    "text": "homework8  homework_01.html Code",
-    "crumbs": [
-      "homework",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>homework_01.html</span>"
     ]
   }
 ]
