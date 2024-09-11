@@ -1,4 +1,36 @@
 ---
 title: "Activity 03"
+author: Robert Reiss
+date: 9-11-24
 ---
+##Library
+```{r}
+library(tidyverse)
+```
+
+
+```{r}
+# Import data
+hikes <- read.csv("https://mac-stat.github.io/data/high_peaks.csv")
+```
+
+## Exercise 1
+```{r}
+head(hikes)
+```
+
+##Exercise 2
+```{r}
+# Use the ggplot function
+ggplot(hikes, aes(x = rating)) + geom_bar()
+```
+
+## Exercise 4
+```{r}
+# COMMENT on the change in the code and the corresponding change in the plot
+ggplot(hikes, aes(x = rating)) +
+  geom_bar(color = "orange", fill = "blue") +
+  labs(x = "Rating", y = "Number of hikes") +
+  theme_minimal()
+```
 

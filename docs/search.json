@@ -31,6 +31,28 @@
     ]
   },
   {
+    "objectID": "activities/activity-03.html",
+    "href": "activities/activity-03.html",
+    "title": "3  Activity 03",
+    "section": "",
+    "text": "3.1 Exercise 1\nhead(hikes)\n\n             peak elevation difficulty ascent length time    rating\n1     Mt. Marcy        5344          5   3166   14.8 10.0  moderate\n2 Algonquin Peak       5114          5   2936    9.6  9.0  moderate\n3   Mt. Haystack       4960          7   3570   17.8 12.0 difficult\n4   Mt. Skylight       4926          7   4265   17.9 15.0 difficult\n5 Whiteface Mtn.       4867          4   2535   10.4  8.5      easy\n6       Dix Mtn.       4857          5   2800   13.2 10.0  moderate\n##Exercise 2\n# Use the ggplot function\nggplot(hikes, aes(x = rating)) + geom_bar()",
+    "crumbs": [
+      "Activities",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Activity 03</span>"
+    ]
+  },
+  {
+    "objectID": "activities/activity-03.html#exercise-4",
+    "href": "activities/activity-03.html#exercise-4",
+    "title": "3  Activity 03",
+    "section": "3.2 Exercise 4",
+    "text": "3.2 Exercise 4\n\n# COMMENT on the change in the code and the corresponding change in the plot\nggplot(hikes, aes(x = rating)) +\n  geom_bar(color = \"orange\", fill = \"blue\") +\n  labs(x = \"Rating\", y = \"Number of hikes\") +\n  theme_minimal()",
+    "crumbs": [
+      "Activities",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Activity 03</span>"
+    ]
+  },
+  {
     "objectID": "journal/9_4_24.html",
     "href": "journal/9_4_24.html",
     "title": "4  9-4 Entry",
@@ -72,6 +94,17 @@
     "crumbs": [
       "journal",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>9-10-24 entry</span>"
+    ]
+  },
+  {
+    "objectID": "journal/9_11_24.html",
+    "href": "journal/9_11_24.html",
+    "title": "",
+    "section": "",
+    "text": "journal7  9_11_24.html Code\n\n\n\n\nggplot + geom_bar - “geom_bar” is a layer–each think added after ggplot is a layer",
+    "crumbs": [
+      "journal",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>9_11_24.html</span>"
     ]
   },
   {

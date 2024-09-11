@@ -1,0 +1,8 @@
+---
+title: ""
+author: Robert Reiss
+date: 9-11-24
+---
+
+ggplot + geom_bar
+- "geom_bar" is a layer--each think added after ggplot is a layer

@@ -1,0 +1,15 @@
+{
+  "hash": "f50b0bb3911d96bcc58ecfada9dfebe7",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Activity 03\"\nauthor: Robert Reiss\ndate: 9-11-24\n---\n\n##Library\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\n```\n\n\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\n# Import data\nhikes <- read.csv(\"https://mac-stat.github.io/data/high_peaks.csv\")\n```\n:::\n\n\n## Exercise 1\n\n::: {.cell}\n\n```{.r .cell-code}\nhead(hikes)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n             peak elevation difficulty ascent length time    rating\n1     Mt. Marcy        5344          5   3166   14.8 10.0  moderate\n2 Algonquin Peak       5114          5   2936    9.6  9.0  moderate\n3   Mt. Haystack       4960          7   3570   17.8 12.0 difficult\n4   Mt. Skylight       4926          7   4265   17.9 15.0 difficult\n5 Whiteface Mtn.       4867          4   2535   10.4  8.5      easy\n6       Dix Mtn.       4857          5   2800   13.2 10.0  moderate\n```\n\n\n:::\n:::\n\n\n##Exercise 2\n\n::: {.cell}\n\n```{.r .cell-code}\n# Use the ggplot function\nggplot(hikes, aes(x = rating)) + geom_bar()\n```\n\n::: {.cell-output-display}\n![](activity-03_files/figure-html/unnamed-chunk-4-1.png){width=672}\n:::\n:::\n\n\n## Exercise 4\n\n::: {.cell}\n\n```{.r .cell-code}\n# COMMENT on the change in the code and the corresponding change in the plot\nggplot(hikes, aes(x = rating)) +\n  geom_bar(color = \"orange\", fill = \"blue\") +\n  labs(x = \"Rating\", y = \"Number of hikes\") +\n  theme_minimal()\n```\n\n::: {.cell-output-display}\n![](activity-03_files/figure-html/unnamed-chunk-5-1.png){width=672}\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
