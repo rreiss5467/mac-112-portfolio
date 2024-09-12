@@ -23,6 +23,7 @@ book:
         - journal/9_6_24.qmd
         - journal/9_10_24.qmd
         - journal/9_11_24.qmd
+        - journal/9_12_24.qmd
     
     - part: notes/README.qmd
       chapters: 

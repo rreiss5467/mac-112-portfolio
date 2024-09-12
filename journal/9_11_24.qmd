@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "ggplot stuff"
 author: Robert Reiss
 date: 9-11-24
 ---
