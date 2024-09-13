@@ -35,4 +35,6 @@ ggplot(survey, aes(x=fave_temp))+geom_bar(fill="darkred")+labs(x="Favorite Tempe
 ggplot(survey, aes(x=fave_temp))+geom_histogram(bins = 20 ,fill="darkred")+labs(x="Favorite Temperature Celsius", y="Preference Frequency")+theme_classic()
 ```
 
+# Bivariate notes
 
+can fill with another variable 

@@ -1,0 +1,34 @@
+---
+title: "Bivariate Viz"
+author: Robert Reiss
+date: 9-13-24
+---
+```{r}
+library(tidyverse)
+```
+
+```{r}
+# Load data
+elections <- read.csv("https://mac-stat.github.io/data/election_2020_county.csv")
+
+# Check it out
+head(elections)
+```
+# Exercise 0 a
+43%
+
+```{r}
+ggplot(elections, aes(x = winner_20)) + geom_bar()
+```
+# Exercise 0b
+
+```{r}
+ggplot(elections, aes(x = repub_pct_20))+geom_histogram(color = "white")
+```
+
+# Exercise 1
+
+```{r}
+ggplot(elections, aes(x = repub_pct_16, y = repub_pct_20))+geom_point()
+```
+
