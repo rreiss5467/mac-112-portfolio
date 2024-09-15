@@ -119,6 +119,61 @@
     ]
   },
   {
+    "objectID": "journal/9_16_24.html",
+    "href": "journal/9_16_24.html",
+    "title": "9  Chapter 5 Notes",
+    "section": "",
+    "text": "9.1 Notes\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n# Import data\nweather &lt;- read.csv(\"https://mac-stat.github.io/data/weather_3_locations.csv\") %&gt;% \n  mutate(date = as.Date(date))  \n\n# Check out the first 6 rows\n# What are the units of observation?\n# humidity, rain levels, rainbow, temperature, pressure, etc\n\n# How many data points do we have? \n# 2367\n\n# What type of variables do we have?\n# categorical and numerical",
+    "crumbs": [
+      "journal",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Chapter 5 Notes</span>"
+    ]
+  },
+  {
+    "objectID": "journal/9_16_24.html#location-only-wollongong",
+    "href": "journal/9_16_24.html#location-only-wollongong",
+    "title": "9  Chapter 5 Notes",
+    "section": "11.1 Location = only Wollongong",
+    "text": "11.1 Location = only Wollongong\n\nwoll &lt;- weather %&gt;%\n  filter(location == \"Wollongong\") %&gt;% \n  mutate(date = as.Date(date))  \n\n# How often does it raintoday?\n# Fill your geometric layer with the color blue.\nggplot(woll, aes(x = raintoday))+geom_bar(fill = \"lightblue\")\n\n\n\n\n\n\n\n# Now compare different approaches\n\n# Default: stacked bars\nggplot(woll, aes(x = raintoday, fill = raintomorrow)) + \n  geom_bar()\n\n\n\n\n\n\n\n# Side-by-side bars\nggplot(woll, aes(x = raintoday, fill = raintomorrow)) + \n  geom_bar(position = \"dodge\")\n\n\n\n\n\n\n\n# Proportional bars\n# position = \"fill\" refers to filling the frame, nothing to do with the color-related fill\nggplot(woll, aes(x = raintoday, fill = raintomorrow)) + \n  geom_bar(position = \"fill\")",
+    "crumbs": [
+      "journal",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Chapter 5 Notes</span>"
+    ]
+  },
+  {
+    "objectID": "journal/9_16_24.html#example-4",
+    "href": "journal/9_16_24.html#example-4",
+    "title": "9  Chapter 5 Notes",
+    "section": "11.2 Example 4",
+    "text": "11.2 Example 4\n\nggplot(weather, aes(y = temp3pm, x = date))+geom_line()",
+    "crumbs": [
+      "journal",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Chapter 5 Notes</span>"
+    ]
+  },
+  {
+    "objectID": "journal/9_16_24.html#example-5",
+    "href": "journal/9_16_24.html#example-5",
+    "title": "9  Chapter 5 Notes",
+    "section": "11.3 Example 5",
+    "text": "11.3 Example 5\n\n# Plot temp3pm vs temp9am\n# Change the code in order to indicate the location to which each data point corresponds\nggplot(weather, aes(y = temp3pm, x = temp9am)) + \n  geom_point(\"Hobart\" = \"lightblue\", \"Uluru\" = \"lightgreen\", \"Wollongong\" = \"lightyellow\")\n\nWarning in geom_point(Hobart = \"lightblue\", Uluru = \"lightgreen\", Wollongong =\n\"lightyellow\"): Ignoring unknown parameters: `Hobart`, `Uluru`, and\n`Wollongong`\n\n\nWarning: Removed 27 rows containing missing values or values outside the scale range\n(`geom_point()`).",
+    "crumbs": [
+      "journal",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Chapter 5 Notes</span>"
+    ]
+  },
+  {
+    "objectID": "journal/9_16_24.html#questions",
+    "href": "journal/9_16_24.html#questions",
+    "title": "9  Chapter 5 Notes",
+    "section": "11.4 Questions",
+    "text": "11.4 Questions",
+    "crumbs": [
+      "journal",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Chapter 5 Notes</span>"
+    ]
+  },
+  {
     "objectID": "notes/README.html",
     "href": "notes/README.html",
     "title": "Notes",

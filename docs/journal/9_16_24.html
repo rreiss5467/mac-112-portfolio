@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Robert Reiss">
+<meta name="dcterms.date" content="2030-03-24">
 
-<title>COMP/STAT112 Notebook - 10&nbsp; Note 01</title>
+<title>COMP/STAT112 Notebook - 9&nbsp; Chapter 5 Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +66,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../notes/note-02.html" rel="next">
-<link href="../notes/README.html" rel="prev">
+<link href="../notes/README.html" rel="next">
+<link href="../journal/9_12_24.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -115,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/README.html">Notes</a></li><li class="breadcrumb-item"><a href="../notes/note-01.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Note 01</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../journal/9_4_24.html">journal</a></li><li class="breadcrumb-item"><a href="../journal/9_16_24.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 5 Notes</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -223,7 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../journal/9_16_24.html" class="sidebar-item-text sidebar-link">
+  <a href="../journal/9_16_24.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 5 Notes</span></span></a>
   </div>
 </li>
@@ -240,7 +242,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/note-01.html" class="sidebar-item-text sidebar-link active">
+  <a href="../notes/note-01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Note 01</span></span></a>
   </div>
 </li>
@@ -258,21 +260,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#notes" id="toc-notes" class="nav-link active" data-scroll-target="#notes"><span class="header-section-number">9.1</span> Notes</a></li>
+  <li><a href="#plot-to-examine-temp3pm" id="toc-plot-to-examine-temp3pm" class="nav-link" data-scroll-target="#plot-to-examine-temp3pm"><span class="header-section-number">10</span> Plot to examine temp3pm</a></li>
+  <li><a href="#afternoon-temp-by-location" id="toc-afternoon-temp-by-location" class="nav-link" data-scroll-target="#afternoon-temp-by-location"><span class="header-section-number">11</span> Afternoon temp by location</a>
+  <ul class="collapse">
+  <li><a href="#location-only-wollongong" id="toc-location-only-wollongong" class="nav-link" data-scroll-target="#location-only-wollongong"><span class="header-section-number">11.1</span> Location = only Wollongong</a></li>
+  <li><a href="#example-4" id="toc-example-4" class="nav-link" data-scroll-target="#example-4"><span class="header-section-number">11.2</span> Example 4</a></li>
+  <li><a href="#example-5" id="toc-example-5" class="nav-link" data-scroll-target="#example-5"><span class="header-section-number">11.3</span> Example 5</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="header-section-number">11.4</span> Questions</a></li>
+  </ul></li>
+  <li><a href="#for-example-2-ch.5-what-does-it-mean-when-it-asks-us-to-plot-w-or-wo-facets-or-densities" id="toc-for-example-2-ch.5-what-does-it-mean-when-it-asks-us-to-plot-w-or-wo-facets-or-densities" class="nav-link" data-scroll-target="#for-example-2-ch.5-what-does-it-mean-when-it-asks-us-to-plot-w-or-wo-facets-or-densities"><span class="header-section-number">12</span> For Example 2, ch.5 –what does it mean when it asks us to plot w/ or w/o “facets” or “densities”?</a></li>
+  <li><a href="#how-do-we-do-example-5" id="toc-how-do-we-do-example-5" class="nav-link" data-scroll-target="#how-do-we-do-example-5"><span class="header-section-number">13</span> How do we do example 5?</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/README.html">Notes</a></li><li class="breadcrumb-item"><a href="../notes/note-01.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Note 01</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../journal/9_4_24.html">journal</a></li><li class="breadcrumb-item"><a href="../journal/9_16_24.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 5 Notes</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Note 01</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 5 Notes</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Robert Reiss </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 24, 2030</p>
+    </div>
+  </div>
   
     
   </div>
@@ -282,10 +312,181 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="notes" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="notes"><span class="header-section-number">9.1</span> Notes</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Import data</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>weather <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/weather_3_locations.csv"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as.Date</span>(date))  </span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="co"># Check out the first 6 rows</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="co"># What are the units of observation?</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="co"># humidity, rain levels, rainbow, temperature, pressure, etc</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="co"># How many data points do we have? </span></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="co"># 2367</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a></span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="co"># What type of variables do we have?</span></span>
+<span id="cb3-13"><a href="#cb3-13"></a><span class="co"># categorical and numerical</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="plot-to-examine-temp3pm" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Plot to examine temp3pm</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">x =</span> temp3pm))<span class="sc">+</span><span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 19 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="9_16_24_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="afternoon-temp-by-location" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Afternoon temp by location</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Plot 1 (no facets &amp; starting from a density plot of temp3pm)</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">x =</span> temp3pm)) <span class="sc">+</span> </span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 19 rows containing non-finite outside the scale range
+(`stat_density()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="9_16_24_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="location-only-wollongong" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="location-only-wollongong"><span class="header-section-number">11.1</span> Location = only Wollongong</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>woll <span class="ot">&lt;-</span> weather <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">filter</span>(location <span class="sc">==</span> <span class="st">"Wollongong"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as.Date</span>(date))  </span>
+<span id="cb9-4"><a href="#cb9-4"></a></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="co"># How often does it raintoday?</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="co"># Fill your geometric layer with the color blue.</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday))<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"lightblue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="9_16_24_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Now compare different approaches</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="co"># Default: stacked bars</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday, <span class="at">fill =</span> raintomorrow)) <span class="sc">+</span> </span>
+<span id="cb10-5"><a href="#cb10-5"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="9_16_24_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># Side-by-side bars</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday, <span class="at">fill =</span> raintomorrow)) <span class="sc">+</span> </span>
+<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="9_16_24_files/figure-html/unnamed-chunk-5-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Proportional bars</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="co"># position = "fill" refers to filling the frame, nothing to do with the color-related fill</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday, <span class="at">fill =</span> raintomorrow)) <span class="sc">+</span> </span>
+<span id="cb12-4"><a href="#cb12-4"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="9_16_24_files/figure-html/unnamed-chunk-5-4.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="example-4" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="example-4"><span class="header-section-number">11.2</span> Example 4</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">y =</span> temp3pm, <span class="at">x =</span> date))<span class="sc">+</span><span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="9_16_24_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="example-5" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="example-5"><span class="header-section-number">11.3</span> Example 5</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># Plot temp3pm vs temp9am</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="co"># Change the code in order to indicate the location to which each data point corresponds</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">y =</span> temp3pm, <span class="at">x =</span> temp9am)) <span class="sc">+</span> </span>
+<span id="cb14-4"><a href="#cb14-4"></a>  <span class="fu">geom_point</span>(<span class="st">"Hobart"</span> <span class="ot">=</span> <span class="st">"lightblue"</span>, <span class="st">"Uluru"</span> <span class="ot">=</span> <span class="st">"lightgreen"</span>, <span class="st">"Wollongong"</span> <span class="ot">=</span> <span class="st">"lightyellow"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom_point(Hobart = "lightblue", Uluru = "lightgreen", Wollongong =
+"lightyellow"): Ignoring unknown parameters: `Hobart`, `Uluru`, and
+`Wollongong`</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 27 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="9_16_24_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="questions" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="questions"><span class="header-section-number">11.4</span> Questions</h2>
+</section>
+</section>
+<section id="for-example-2-ch.5-what-does-it-mean-when-it-asks-us-to-plot-w-or-wo-facets-or-densities" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> For Example 2, ch.5 –what does it mean when it asks us to plot w/ or w/o “facets” or “densities”?</h1>
+</section>
+<section id="how-do-we-do-example-5" class="level1" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> How do we do example 5?</h1>
 
 
 <!-- -->
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -750,19 +951,103 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../notes/README.html" class="pagination-link" aria-label="Notes">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Notes</span>
+      <a href="../journal/9_12_24.html" class="pagination-link" aria-label="Chapter 4 Notes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 4 Notes</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../notes/note-02.html" class="pagination-link" aria-label="Note 02">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Note 02</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../notes/README.html" class="pagination-link" aria-label="Notes">
+        <span class="nav-page-text">Notes</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "Note 01"</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="co">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1"></a><span class="co">---</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="an">title:</span><span class="co"> "Chapter 5 Notes"</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="an">author:</span><span class="co"> Robert Reiss</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a><span class="an">date:</span><span class="co"> 9-15-24</span></span>
+<span id="cb17-5"><a href="#cb17-5"></a><span class="co">---</span></span>
+<span id="cb17-6"><a href="#cb17-6"></a> </span>
+<span id="cb17-7"><a href="#cb17-7"></a><span class="fu">## Notes</span></span>
+<span id="cb17-8"><a href="#cb17-8"></a></span>
+<span id="cb17-11"><a href="#cb17-11"></a><span class="in">```{r}</span></span>
+<span id="cb17-12"><a href="#cb17-12"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb17-13"><a href="#cb17-13"></a><span class="in">```</span></span>
+<span id="cb17-14"><a href="#cb17-14"></a></span>
+<span id="cb17-17"><a href="#cb17-17"></a><span class="in">```{r}</span></span>
+<span id="cb17-18"><a href="#cb17-18"></a><span class="co"># Import data</span></span>
+<span id="cb17-19"><a href="#cb17-19"></a>weather <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/weather_3_locations.csv"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-20"><a href="#cb17-20"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as.Date</span>(date))  </span>
+<span id="cb17-21"><a href="#cb17-21"></a></span>
+<span id="cb17-22"><a href="#cb17-22"></a><span class="co"># Check out the first 6 rows</span></span>
+<span id="cb17-23"><a href="#cb17-23"></a><span class="co"># What are the units of observation?</span></span>
+<span id="cb17-24"><a href="#cb17-24"></a><span class="co"># humidity, rain levels, rainbow, temperature, pressure, etc</span></span>
+<span id="cb17-25"><a href="#cb17-25"></a></span>
+<span id="cb17-26"><a href="#cb17-26"></a><span class="co"># How many data points do we have? </span></span>
+<span id="cb17-27"><a href="#cb17-27"></a><span class="co"># 2367</span></span>
+<span id="cb17-28"><a href="#cb17-28"></a></span>
+<span id="cb17-29"><a href="#cb17-29"></a><span class="co"># What type of variables do we have?</span></span>
+<span id="cb17-30"><a href="#cb17-30"></a><span class="co"># categorical and numerical</span></span>
+<span id="cb17-31"><a href="#cb17-31"></a><span class="in">```</span></span>
+<span id="cb17-32"><a href="#cb17-32"></a></span>
+<span id="cb17-33"><a href="#cb17-33"></a><span class="fu"># Plot to examine temp3pm</span></span>
+<span id="cb17-36"><a href="#cb17-36"></a><span class="in">```{r}</span></span>
+<span id="cb17-37"><a href="#cb17-37"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">x =</span> temp3pm))<span class="sc">+</span><span class="fu">geom_histogram</span>()</span>
+<span id="cb17-38"><a href="#cb17-38"></a><span class="in">```</span></span>
+<span id="cb17-39"><a href="#cb17-39"></a></span>
+<span id="cb17-40"><a href="#cb17-40"></a><span class="fu"># Afternoon temp by location</span></span>
+<span id="cb17-41"><a href="#cb17-41"></a></span>
+<span id="cb17-44"><a href="#cb17-44"></a><span class="in">```{r}</span></span>
+<span id="cb17-45"><a href="#cb17-45"></a><span class="co"># Plot 1 (no facets &amp; starting from a density plot of temp3pm)</span></span>
+<span id="cb17-46"><a href="#cb17-46"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">x =</span> temp3pm)) <span class="sc">+</span> </span>
+<span id="cb17-47"><a href="#cb17-47"></a>  <span class="fu">geom_density</span>()</span>
+<span id="cb17-48"><a href="#cb17-48"></a><span class="in">```</span></span>
+<span id="cb17-49"><a href="#cb17-49"></a></span>
+<span id="cb17-50"><a href="#cb17-50"></a><span class="fu">## Location = only Wollongong</span></span>
+<span id="cb17-53"><a href="#cb17-53"></a><span class="in">```{r}</span></span>
+<span id="cb17-54"><a href="#cb17-54"></a>woll <span class="ot">&lt;-</span> weather <span class="sc">%&gt;%</span></span>
+<span id="cb17-55"><a href="#cb17-55"></a>  <span class="fu">filter</span>(location <span class="sc">==</span> <span class="st">"Wollongong"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-56"><a href="#cb17-56"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as.Date</span>(date))  </span>
+<span id="cb17-57"><a href="#cb17-57"></a></span>
+<span id="cb17-58"><a href="#cb17-58"></a><span class="co"># How often does it raintoday?</span></span>
+<span id="cb17-59"><a href="#cb17-59"></a><span class="co"># Fill your geometric layer with the color blue.</span></span>
+<span id="cb17-60"><a href="#cb17-60"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday))<span class="sc">+</span><span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"lightblue"</span>)</span>
+<span id="cb17-61"><a href="#cb17-61"></a></span>
+<span id="cb17-62"><a href="#cb17-62"></a><span class="co"># Now compare different approaches</span></span>
+<span id="cb17-63"><a href="#cb17-63"></a></span>
+<span id="cb17-64"><a href="#cb17-64"></a><span class="co"># Default: stacked bars</span></span>
+<span id="cb17-65"><a href="#cb17-65"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday, <span class="at">fill =</span> raintomorrow)) <span class="sc">+</span> </span>
+<span id="cb17-66"><a href="#cb17-66"></a>  <span class="fu">geom_bar</span>()</span>
+<span id="cb17-67"><a href="#cb17-67"></a></span>
+<span id="cb17-68"><a href="#cb17-68"></a><span class="co"># Side-by-side bars</span></span>
+<span id="cb17-69"><a href="#cb17-69"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday, <span class="at">fill =</span> raintomorrow)) <span class="sc">+</span> </span>
+<span id="cb17-70"><a href="#cb17-70"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span>
+<span id="cb17-71"><a href="#cb17-71"></a></span>
+<span id="cb17-72"><a href="#cb17-72"></a><span class="co"># Proportional bars</span></span>
+<span id="cb17-73"><a href="#cb17-73"></a><span class="co"># position = "fill" refers to filling the frame, nothing to do with the color-related fill</span></span>
+<span id="cb17-74"><a href="#cb17-74"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday, <span class="at">fill =</span> raintomorrow)) <span class="sc">+</span> </span>
+<span id="cb17-75"><a href="#cb17-75"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>)</span>
+<span id="cb17-76"><a href="#cb17-76"></a><span class="in">```</span></span>
+<span id="cb17-77"><a href="#cb17-77"></a></span>
+<span id="cb17-78"><a href="#cb17-78"></a><span class="fu">## Example 4</span></span>
+<span id="cb17-81"><a href="#cb17-81"></a><span class="in">```{r}</span></span>
+<span id="cb17-82"><a href="#cb17-82"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">y =</span> temp3pm, <span class="at">x =</span> date))<span class="sc">+</span><span class="fu">geom_line</span>()</span>
+<span id="cb17-83"><a href="#cb17-83"></a><span class="in">```</span></span>
+<span id="cb17-84"><a href="#cb17-84"></a><span class="fu">## Example 5</span></span>
+<span id="cb17-87"><a href="#cb17-87"></a><span class="in">```{r}</span></span>
+<span id="cb17-88"><a href="#cb17-88"></a><span class="co"># Plot temp3pm vs temp9am</span></span>
+<span id="cb17-89"><a href="#cb17-89"></a><span class="co"># Change the code in order to indicate the location to which each data point corresponds</span></span>
+<span id="cb17-90"><a href="#cb17-90"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">y =</span> temp3pm, <span class="at">x =</span> temp9am)) <span class="sc">+</span> </span>
+<span id="cb17-91"><a href="#cb17-91"></a>  <span class="fu">geom_point</span>(<span class="st">"Hobart"</span> <span class="ot">=</span> <span class="st">"lightblue"</span>, <span class="st">"Uluru"</span> <span class="ot">=</span> <span class="st">"lightgreen"</span>, <span class="st">"Wollongong"</span> <span class="ot">=</span> <span class="st">"lightyellow"</span>)</span>
+<span id="cb17-92"><a href="#cb17-92"></a><span class="in">```</span></span>
+<span id="cb17-93"><a href="#cb17-93"></a></span>
+<span id="cb17-94"><a href="#cb17-94"></a></span>
+<span id="cb17-95"><a href="#cb17-95"></a></span>
+<span id="cb17-96"><a href="#cb17-96"></a><span class="fu">## Questions</span></span>
+<span id="cb17-97"><a href="#cb17-97"></a></span>
+<span id="cb17-98"><a href="#cb17-98"></a><span class="fu"># For Example 2, ch.5 --what does it mean when it asks us to plot w/ or w/o "facets" or "densities"?</span></span>
+<span id="cb17-99"><a href="#cb17-99"></a></span>
+<span id="cb17-100"><a href="#cb17-100"></a><span class="fu"># How do we do example 5?</span></span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

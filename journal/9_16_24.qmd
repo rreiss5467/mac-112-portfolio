@@ -1,0 +1,87 @@
+---
+title: "Chapter 5 Notes"
+author: Robert Reiss
+date: 9-15-24
+---
+ 
+## Notes
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+# Import data
+weather <- read.csv("https://mac-stat.github.io/data/weather_3_locations.csv") %>% 
+  mutate(date = as.Date(date))  
+
+# Check out the first 6 rows
+# What are the units of observation?
+# humidity, rain levels, rainbow, temperature, pressure, etc
+
+# How many data points do we have? 
+# 2367
+
+# What type of variables do we have?
+# categorical and numerical
+```
+
+# Plot to examine temp3pm
+```{r}
+ggplot(weather, aes(x = temp3pm))+geom_histogram()
+```
+
+# Afternoon temp by location
+
+```{r}
+# Plot 1 (no facets & starting from a density plot of temp3pm)
+ggplot(weather, aes(x = temp3pm)) + 
+  geom_density()
+```
+
+## Location = only Wollongong
+```{r}
+woll <- weather %>%
+  filter(location == "Wollongong") %>% 
+  mutate(date = as.Date(date))  
+
+# How often does it raintoday?
+# Fill your geometric layer with the color blue.
+ggplot(woll, aes(x = raintoday))+geom_bar(fill = "lightblue")
+
+# Now compare different approaches
+
+# Default: stacked bars
+ggplot(woll, aes(x = raintoday, fill = raintomorrow)) + 
+  geom_bar()
+
+# Side-by-side bars
+ggplot(woll, aes(x = raintoday, fill = raintomorrow)) + 
+  geom_bar(position = "dodge")
+
+# Proportional bars
+# position = "fill" refers to filling the frame, nothing to do with the color-related fill
+ggplot(woll, aes(x = raintoday, fill = raintomorrow)) + 
+  geom_bar(position = "fill")
+```
+
+## Example 4
+```{r}
+ggplot(weather, aes(y = temp3pm, x = date))+geom_line()
+```
+## Example 5
+```{r}
+# Plot temp3pm vs temp9am
+# Change the code in order to indicate the location to which each data point corresponds
+ggplot(weather, aes(y = temp3pm, x = temp9am)) + 
+  geom_point("Hobart" = "lightblue", "Uluru" = "lightgreen", "Wollongong" = "lightyellow")
+```
+
+
+
+## Questions
+
+# For Example 2, ch.5 --what does it mean when it asks us to plot w/ or w/o "facets" or "densities"?
+
+# How do we do example 5?
+
