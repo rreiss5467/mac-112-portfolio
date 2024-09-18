@@ -1,5 +1,5 @@
 ---
-title: "9-10-24 entry"
+title: "9_10_24"
 editor: visual
 ---
 
