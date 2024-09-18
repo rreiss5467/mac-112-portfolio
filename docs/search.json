@@ -152,8 +152,8 @@
     ]
   },
   {
-    "objectID": "journal/9_10_24.html",
-    "href": "journal/9_10_24.html",
+    "objectID": "journal/9_10_24 entry.html",
+    "href": "journal/9_10_24 entry.html",
     "title": "8  9_10_24",
     "section": "",
     "text": "8.1 Notes\n“gg”=“grammar of graphics”–e.g. “ggplot”",
@@ -163,8 +163,8 @@
     ]
   },
   {
-    "objectID": "journal/9_10_24.html#notes",
-    "href": "journal/9_10_24.html#notes",
+    "objectID": "journal/9_10_24 entry.html#notes",
+    "href": "journal/9_10_24 entry.html#notes",
     "title": "8  9_10_24",
     "section": "",
     "text": "a frame: variables/features that define the axes of the canvas\na layer: geometric elements added to the canvas to represent data points/patterns (e.g. lines, points)\n\nsometimes called “geoms”/“glyphs” (like hieroglyph)\n\nscales: aesthetics added to geom elements (e.g. color, shape)\nfaceting: splitting up of data into subplots/facets to examine groups w/in the data\na theme: controls of finer points of plot aesthetics (e.g. font type, background, etc)",
