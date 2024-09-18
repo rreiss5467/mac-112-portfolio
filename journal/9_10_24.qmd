@@ -2,16 +2,19 @@
 title: "9-10-24 entry"
 editor: visual
 ---
+
 ## Notes
-- a frame: variables/features that define the axes of the canvas
 
-- a layer: geometric elements added to the canvas to represent data points/patterns (e.g. lines, points)
-  - sometimes called "geoms"/"glyphs" (like *hieroglyph*)
-  
-- scales: aesthetics added to geom elements (e.g. color, shape)
+-   a frame: variables/features that define the axes of the canvas
 
-- faceting: splitting up of data into subplots/facets to examine groups w/in the data
+-   a layer: geometric elements added to the canvas to represent data points/patterns (e.g. lines, points)
 
-- a theme: controls of finer points of plot aesthetics (e.g. font type, background, etc)
+    -   sometimes called "geoms"/"glyphs" (like *hieroglyph*)
+
+-   scales: aesthetics added to geom elements (e.g. color, shape)
+
+-   faceting: splitting up of data into subplots/facets to examine groups w/in the data
+
+-   a theme: controls of finer points of plot aesthetics (e.g. font type, background, etc)
 
 "gg"="grammar of graphics"--e.g. "ggplot"

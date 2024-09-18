@@ -103,7 +103,7 @@ ggplot(weather, aes(x = temp3pm)) +
 
 ```{r}
 # Plot 2 (no facets or densities)
-ggplot(weather, aes(y = temp3pm, x = location)) + 
+ggplot(weather, aes(y = temp3pm, x = location)) 
 ```
 
 ```{r}
