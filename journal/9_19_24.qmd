@@ -1,0 +1,15 @@
+---
+title: "Chapter 6 Notes"
+author: Robert Reiss
+date: 9-19-24
+---
+
+```{r}
+library(tidyverse)
+```
+
+# point maps: plotting locations of individual observations (e.g. bigfoot sightings)
+
+# countour maps: plotting the *density* or distribution of observations (as opposed to the individual observations themselves)
+
+# choropleth maps: plotting outcomes in different *regions*
