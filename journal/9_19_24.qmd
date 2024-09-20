@@ -13,3 +13,5 @@ library(tidyverse)
 # countour maps: plotting the *density* or distribution of observations (as opposed to the individual observations themselves)
 
 # choropleth maps: plotting outcomes in different *regions*
+
+# geom_jitter to plot data points in non-overlapping fashion
