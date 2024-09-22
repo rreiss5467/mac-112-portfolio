@@ -1,0 +1,6 @@
+---
+title: "Chapter 7 Notes"
+author: Robert Reiss
+date: 9-22-24
+---
+Make sure to adjust color palettes of visualizations so that those with colorblindness can understand them, too.

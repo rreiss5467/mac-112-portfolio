@@ -130,135 +130,157 @@
     ]
   },
   {
+    "objectID": "activities/activity_06.html",
+    "href": "activities/activity_06.html",
+    "title": "6  Activity 06",
+    "section": "",
+    "text": "library(leaflet)\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(ggplot2)\n\n\n7 Exercise 1\n\nfave_places &lt;- read.csv(\"https://ajohns24.github.io/data/112/our_fave_places.csv\")\n\n# Check it out\nhead(fave_places)\n\n  latitude longitude\n1       46      -123\n2       33        52\n3       48       -90\n4       36      -112\n5       59        25\n6       39      -106\n\n\n\n# Load the leaflet package\nlibrary(leaflet)\n\n# Just a plotting frame\nleaflet(data = fave_places)\n\n\n\n\n\n\n# Now what do we have?\nleaflet(data = fave_places) %&gt;% \n  addTiles()\n\n\n\n\n\n\n# Now what do we have?\n# longitude and latitude refer to the variables in our data\nleaflet(data = fave_places) %&gt;% \n  addTiles() %&gt;% \n  addMarkers(lng = ~longitude, lat = ~latitude)\n\n\n\n\n\n\n# Since we named them \"longitude\" and \"latitude\", the function\n# automatically recognizes these variables. No need to write them!\nleaflet(data = fave_places) %&gt;% \n  addTiles() %&gt;% \n  addMarkers()\n\n\n\n\n\n\n\n8 Exercise 2\n\n# Load package needed to change color\nlibrary(gplots)\n\n\nAttaching package: 'gplots'\n\n\nThe following object is masked from 'package:stats':\n\n    lowess\n\n# We can add colored circles instead of markers at each location\nleaflet(data = fave_places) %&gt;% \n  addTiles() %&gt;% \n  addCircles(color = col2hex(\"red\"))\n\n\n\n\n\n\n# We can change the background\n# Mark locations with yellow dots\n# And connect the dots, in their order in the dataset, with green lines\n# (These green lines don't mean anything here, but would if this were somebody's travel path!)\nleaflet(data = fave_places) %&gt;%\n  addProviderTiles(\"USGS\") %&gt;%\n  addCircles(weight = 10, opacity = 1, color = col2hex(\"yellow\")) %&gt;%\n  addPolylines(\n    lng = ~longitude,\n    lat = ~latitude,\n    color = col2hex(\"green\")\n  )\n\n\n\n\n\n\n\n9 Exercise 3\n\n# Import starbucks location data\nstarbucks &lt;- read.csv(\"https://mac-stat.github.io/data/starbucks.csv\")\n\n# Don't worry about the syntax\nstarbucks_mn &lt;- starbucks %&gt;%   \n  filter(Country == \"US\", State.Province == \"MN\")\n\n# Leaflet map of sbucks in MN\nleaflet(data = starbucks_mn) %&gt;% \n  addTiles() %&gt;% \n  addMarkers()\n\nAssuming \"Longitude\" and \"Latitude\" are longitude and latitude, respectively\n\n\n\n\n\n\n\nggplot(starbucks, aes(x = Longitude, y = Latitude)) + \n  geom_point(alpha = 0.2, size = 0.2)\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n10 Exercise 4a\n\n# Load the package\nlibrary(rnaturalearth)\n\n# Get info about country boundaries across the world\n# in a \"sf\" or simple feature format\nworld_boundaries &lt;- ne_countries(returnclass = \"sf\")\n\n\n\n11 Exercise 4b\n\n# What does this code produce?\n# What geom are we using for the point map?\nggplot(world_boundaries) + \n  geom_sf()\n\n\n\n\n\n\n\n\n\n# Load package needed to change map theme\nlibrary(mosaic)\n\nRegistered S3 method overwritten by 'mosaic':\n  method                           from   \n  fortify.SpatialPolygonsDataFrame ggplot2\n\n\n\nThe 'mosaic' package masks several functions from core packages in order to add \nadditional features.  The original behavior of these functions should not be affected by this.\n\n\n\nAttaching package: 'mosaic'\n\n\nThe following object is masked from 'package:Matrix':\n\n    mean\n\n\nThe following objects are masked from 'package:dplyr':\n\n    count, do, tally\n\n\nThe following object is masked from 'package:purrr':\n\n    cross\n\n\nThe following object is masked from 'package:ggplot2':\n\n    stat\n\n\nThe following objects are masked from 'package:stats':\n\n    binom.test, cor, cor.test, cov, fivenum, IQR, median, prop.test,\n    quantile, sd, t.test, var\n\n\nThe following objects are masked from 'package:base':\n\n    max, mean, min, prod, range, sample, sum\n\n# Add a point for each Starbucks\n# NOTE: The Starbucks info is in our starbucks data, not world_boundaries\n# How does this change how we use geom_point?!\nggplot(world_boundaries) + \n  geom_sf() + \n  geom_point(\n    data = starbucks,\n    aes(x = Longitude, y = Latitude),\n    alpha = 0.3, size = 0.2, color = \"darkgreen\"\n  ) +\n  theme_map()\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n12 Exercise 4c\n\n\n13 Exercise 5\n\n# We'll learn this syntax soon! Don't worry about it now.\nstarbucks_cma &lt;- starbucks %&gt;% \n  filter(Country %in% c('CA', 'MX', 'US'))\n\n\ncma_boundaries &lt;- ne_states(\n  country = c(\"canada\", \"mexico\", \"united states of america\"),\n  returnclass = \"sf\")",
+    "crumbs": [
+      "Activities",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Activity 06</span>"
+    ]
+  },
+  {
     "objectID": "journal/9_4_24.html",
     "href": "journal/9_4_24.html",
-    "title": "6  9-4 Entry",
+    "title": "7  9-4 Entry",
     "section": "",
-    "text": "6.1 I should’ve started with this course instead of STAT 155…I’m starting the semester learning what code means, instead of how to use it.",
+    "text": "7.1 I should’ve started with this course instead of STAT 155…I’m starting the semester learning what code means, instead of how to use it.",
     "crumbs": [
       "journal",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>9-4 Entry</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>9-4 Entry</span>"
     ]
   },
   {
     "objectID": "journal/9_6_24.html",
     "href": "journal/9_6_24.html",
-    "title": "7  9-6-24 Entry",
+    "title": "8  9-6-24 Entry",
     "section": "",
     "text": "Cmd+shift+I is a shortcut for new R code in qmd Unclear what “” does in qmd… “!” takes it from url–&gt;image “[]” becomes the caption for the image Make sure to leave spaces between code (e.g. “x = 100” as opposed to “x=100”) “jo_scare”= “snake case”\nWhy “qmd”? markdown(formats, but doesn’t run code)–&gt;Rmarkdown(runs R code)–&gt;Quarto Markdown (works with multiple coding languages–Python, Java, and Julia)",
     "crumbs": [
       "journal",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>9-6-24 Entry</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>9-6-24 Entry</span>"
     ]
   },
   {
     "objectID": "journal/9_10_24 entry.html",
     "href": "journal/9_10_24 entry.html",
-    "title": "8  9_10_24",
+    "title": "9  9_10_24",
     "section": "",
-    "text": "8.1 Notes\n“gg”=“grammar of graphics”–e.g. “ggplot”",
+    "text": "9.1 Notes\n“gg”=“grammar of graphics”–e.g. “ggplot”",
     "crumbs": [
       "journal",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>9_10_24</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>9_10_24</span>"
     ]
   },
   {
     "objectID": "journal/9_10_24 entry.html#notes",
     "href": "journal/9_10_24 entry.html#notes",
-    "title": "8  9_10_24",
+    "title": "9  9_10_24",
     "section": "",
     "text": "a frame: variables/features that define the axes of the canvas\na layer: geometric elements added to the canvas to represent data points/patterns (e.g. lines, points)\n\nsometimes called “geoms”/“glyphs” (like hieroglyph)\n\nscales: aesthetics added to geom elements (e.g. color, shape)\nfaceting: splitting up of data into subplots/facets to examine groups w/in the data\na theme: controls of finer points of plot aesthetics (e.g. font type, background, etc)",
     "crumbs": [
       "journal",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>9_10_24</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>9_10_24</span>"
     ]
   },
   {
     "objectID": "journal/9_11_24.html",
     "href": "journal/9_11_24.html",
-    "title": "9  ggplot stuff",
+    "title": "10  ggplot stuff",
     "section": "",
     "text": "ggplot + geom_bar - “geom_bar” is a layer–each think added after ggplot is a layer",
     "crumbs": [
       "journal",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>ggplot stuff</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ggplot stuff</span>"
     ]
   },
   {
     "objectID": "journal/9_12_24.html",
     "href": "journal/9_12_24.html",
-    "title": "10  Chapter 4 Notes",
+    "title": "11  Chapter 4 Notes",
     "section": "",
-    "text": "10.1 Notes\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors",
+    "text": "11.1 Notes\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors",
     "crumbs": [
       "journal",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Chapter 4 Notes</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Chapter 4 Notes</span>"
     ]
   },
   {
     "objectID": "journal/9_16_24.html",
     "href": "journal/9_16_24.html",
-    "title": "11  Chapter 5 Notes",
+    "title": "12  Chapter 5 Notes",
     "section": "",
-    "text": "11.1 Notes\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n# Import data\nweather &lt;- read.csv(\"https://mac-stat.github.io/data/weather_3_locations.csv\") %&gt;% \n  mutate(date = as.Date(date))  \n\n# Check out the first 6 rows\n# What are the units of observation?\n# humidity, rain levels, rainbow, temperature, pressure, etc\n\n# How many data points do we have? \n# 2367\n\n# What type of variables do we have?\n# categorical and numerical",
+    "text": "12.1 Notes\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n# Import data\nweather &lt;- read.csv(\"https://mac-stat.github.io/data/weather_3_locations.csv\") %&gt;% \n  mutate(date = as.Date(date))  \n\n# Check out the first 6 rows\n# What are the units of observation?\n# humidity, rain levels, rainbow, temperature, pressure, etc\n\n# How many data points do we have? \n# 2367\n\n# What type of variables do we have?\n# categorical and numerical",
     "crumbs": [
       "journal",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Chapter 5 Notes</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Chapter 5 Notes</span>"
     ]
   },
   {
     "objectID": "journal/9_16_24.html#location-only-wollongong",
     "href": "journal/9_16_24.html#location-only-wollongong",
-    "title": "11  Chapter 5 Notes",
-    "section": "13.1 Location = only Wollongong",
-    "text": "13.1 Location = only Wollongong\n\nwoll &lt;- weather %&gt;%\n  filter(location == \"Wollongong\") %&gt;% \n  mutate(date = as.Date(date))  \n\n# How often does it raintoday?\n# Fill your geometric layer with the color blue.\nggplot(woll, aes(x = raintoday))+geom_bar(fill = \"lightblue\")\n\n\n\n\n\n\n\n# Now compare different approaches\n\n# Default: stacked bars\nggplot(woll, aes(x = raintoday, fill = raintomorrow)) + \n  geom_bar()\n\n\n\n\n\n\n\n# Side-by-side bars\nggplot(woll, aes(x = raintoday, fill = raintomorrow)) + \n  geom_bar(position = \"dodge\")\n\n\n\n\n\n\n\n# Proportional bars\n# position = \"fill\" refers to filling the frame, nothing to do with the color-related fill\nggplot(woll, aes(x = raintoday, fill = raintomorrow)) + \n  geom_bar(position = \"fill\")",
+    "title": "12  Chapter 5 Notes",
+    "section": "14.1 Location = only Wollongong",
+    "text": "14.1 Location = only Wollongong\n\nwoll &lt;- weather %&gt;%\n  filter(location == \"Wollongong\") %&gt;% \n  mutate(date = as.Date(date))  \n\n# How often does it raintoday?\n# Fill your geometric layer with the color blue.\nggplot(woll, aes(x = raintoday))+geom_bar(fill = \"lightblue\")\n\n\n\n\n\n\n\n# Now compare different approaches\n\n# Default: stacked bars\nggplot(woll, aes(x = raintoday, fill = raintomorrow)) + \n  geom_bar()\n\n\n\n\n\n\n\n# Side-by-side bars\nggplot(woll, aes(x = raintoday, fill = raintomorrow)) + \n  geom_bar(position = \"dodge\")\n\n\n\n\n\n\n\n# Proportional bars\n# position = \"fill\" refers to filling the frame, nothing to do with the color-related fill\nggplot(woll, aes(x = raintoday, fill = raintomorrow)) + \n  geom_bar(position = \"fill\")",
     "crumbs": [
       "journal",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Chapter 5 Notes</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Chapter 5 Notes</span>"
     ]
   },
   {
     "objectID": "journal/9_16_24.html#example-4",
     "href": "journal/9_16_24.html#example-4",
-    "title": "11  Chapter 5 Notes",
-    "section": "13.2 Example 4",
-    "text": "13.2 Example 4\n\nggplot(weather, aes(y = temp3pm, x = date))+geom_line()",
+    "title": "12  Chapter 5 Notes",
+    "section": "14.2 Example 4",
+    "text": "14.2 Example 4\n\nggplot(weather, aes(y = temp3pm, x = date))+geom_line()",
     "crumbs": [
       "journal",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Chapter 5 Notes</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Chapter 5 Notes</span>"
     ]
   },
   {
     "objectID": "journal/9_16_24.html#example-5",
     "href": "journal/9_16_24.html#example-5",
-    "title": "11  Chapter 5 Notes",
-    "section": "13.3 Example 5",
-    "text": "13.3 Example 5\n\n# Plot temp3pm vs temp9am\n# Change the code in order to indicate the location to which each data point corresponds\nggplot(weather, aes(y = temp3pm, x = temp9am)) + \n  geom_point(\"Hobart\" = \"lightblue\", \"Uluru\" = \"lightgreen\", \"Wollongong\" = \"lightyellow\")\n\nWarning in geom_point(Hobart = \"lightblue\", Uluru = \"lightgreen\", Wollongong =\n\"lightyellow\"): Ignoring unknown parameters: `Hobart`, `Uluru`, and\n`Wollongong`\n\n\nWarning: Removed 27 rows containing missing values or values outside the scale range\n(`geom_point()`).",
+    "title": "12  Chapter 5 Notes",
+    "section": "14.3 Example 5",
+    "text": "14.3 Example 5\n\n# Plot temp3pm vs temp9am\n# Change the code in order to indicate the location to which each data point corresponds\nggplot(weather, aes(y = temp3pm, x = temp9am)) + \n  geom_point(\"Hobart\" = \"lightblue\", \"Uluru\" = \"lightgreen\", \"Wollongong\" = \"lightyellow\")\n\nWarning in geom_point(Hobart = \"lightblue\", Uluru = \"lightgreen\", Wollongong =\n\"lightyellow\"): Ignoring unknown parameters: `Hobart`, `Uluru`, and\n`Wollongong`\n\n\nWarning: Removed 27 rows containing missing values or values outside the scale range\n(`geom_point()`).",
     "crumbs": [
       "journal",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Chapter 5 Notes</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Chapter 5 Notes</span>"
     ]
   },
   {
     "objectID": "journal/9_16_24.html#questions",
     "href": "journal/9_16_24.html#questions",
-    "title": "11  Chapter 5 Notes",
-    "section": "13.4 Questions",
-    "text": "13.4 Questions",
+    "title": "12  Chapter 5 Notes",
+    "section": "14.4 Questions",
+    "text": "14.4 Questions",
     "crumbs": [
       "journal",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Chapter 5 Notes</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Chapter 5 Notes</span>"
     ]
   },
   {
     "objectID": "journal/9_19_24.html",
     "href": "journal/9_19_24.html",
-    "title": "12  Chapter 6 Notes",
+    "title": "13  Chapter 6 Notes",
     "section": "",
-    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\n13 point maps: plotting locations of individual observations (e.g. bigfoot sightings)\n\n\n14 countour maps: plotting the density or distribution of observations (as opposed to the individual observations themselves)\n\n\n15 choropleth maps: plotting outcomes in different regions",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\n14 point maps: plotting locations of individual observations (e.g. bigfoot sightings)\n\n\n15 countour maps: plotting the density or distribution of observations (as opposed to the individual observations themselves)\n\n\n16 choropleth maps: plotting outcomes in different regions\n\n\n17 geom_jitter to plot data points in non-overlapping fashion",
     "crumbs": [
       "journal",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Chapter 6 Notes</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Chapter 6 Notes</span>"
+    ]
+  },
+  {
+    "objectID": "journal/9_22_24.html",
+    "href": "journal/9_22_24.html",
+    "title": "14  Chapter 7 Notes",
+    "section": "",
+    "text": "Make sure to adjust color palettes of visualizations so that those with colorblindness can understand them, too.",
+    "crumbs": [
+      "journal",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Chapter 7 Notes</span>"
     ]
   },
   {

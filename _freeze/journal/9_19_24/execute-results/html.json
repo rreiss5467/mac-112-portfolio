@@ -1,9 +1,11 @@
 {
-  "hash": "2cbfbc37448991057820ccd7d63e4fd7",
+  "hash": "0a84abbbd1e8e3aa45ac1a8194a23ce9",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Chapter 6 Notes\"\nauthor: Robert Reiss\ndate: 9-19-24\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\n```\n\n\n:::\n:::\n\n\n# point maps: plotting locations of individual observations (e.g. bigfoot sightings)\n\n# countour maps: plotting the *density* or distribution of observations (as opposed to the individual observations themselves)\n\n# choropleth maps: plotting outcomes in different *regions*\n",
-    "supporting": [],
+    "markdown": "---\ntitle: \"Chapter 6 Notes\"\nauthor: Robert Reiss\ndate: 9-19-24\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\n```\n\n\n:::\n:::\n\n\n# point maps: plotting locations of individual observations (e.g. bigfoot sightings)\n\n# countour maps: plotting the *density* or distribution of observations (as opposed to the individual observations themselves)\n\n# choropleth maps: plotting outcomes in different *regions*\n\n# geom_jitter to plot data points in non-overlapping fashion\n",
+    "supporting": [
+      "9_19_24_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],
