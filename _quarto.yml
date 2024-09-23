@@ -19,7 +19,8 @@ book:
       - activities/activity_04.qmd
       - activities/activity_05.qmd
       - activities/activity_06.qmd
-    
+      - activities/activity_07.qmd
+  
     - part: journal
       chapters: 
         - journal/9_4_24.qmd
