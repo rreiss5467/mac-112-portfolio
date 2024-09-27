@@ -10,16 +10,6 @@
     ]
   },
   {
-    "objectID": "activities/README.html",
-    "href": "activities/README.html",
-    "title": "Activities",
-    "section": "",
-    "text": "All activities live here.",
-    "crumbs": [
-      "Activities"
-    ]
-  },
-  {
     "objectID": "activities/activity-01.html",
     "href": "activities/activity-01.html",
     "title": "1  Activity 01",
@@ -336,6 +326,27 @@
     "crumbs": [
       "journal",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Chapter 7 Notes</span>"
+    ]
+  },
+  {
+    "objectID": "journal/9_27_24.html",
+    "href": "journal/9_27_24.html",
+    "title": "16  Pre-exam 1 notes",
+    "section": "",
+    "text": "16.1 first steps with data viz\ndim() str()",
+    "crumbs": [
+      "journal",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Pre-exam 1 notes</span>"
+    ]
+  },
+  {
+    "objectID": "activities/README.html",
+    "href": "activities/README.html",
+    "title": "Activities",
+    "section": "",
+    "text": "All activities live here.",
+    "crumbs": [
+      "Activities"
     ]
   },
   {

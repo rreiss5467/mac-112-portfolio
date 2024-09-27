@@ -31,6 +31,7 @@ book:
         - journal/9_16_24.qmd
         - journal/9_19_24.qmd
         - journal/9_22_24.qmd
+        - journal/9_27_24.qmd
     
     - part: notes/README.qmd
       chapters: 

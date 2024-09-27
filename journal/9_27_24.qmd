@@ -1,0 +1,37 @@
+---
+title: "Pre-exam 1 notes"
+author: Robert Reiss
+date: 9-27-24
+---
+## first steps with data viz
+dim()
+str()
+
+# 2vars
+stacked bar-chart--fill
+facet
+dodge--geom_bar()+position_dodge()
+
+# 3 cat vars
+bar chart, use 3rd variable for facet
+
+# max num vars in one plot
+7--scatterplot; two axes; color; size
+
+# max cat vars in one plot
+3
+
+# how to make the plot more effective
+labs()
+alt text
+everything you put into the graph must be explained, more or less
+
+# spatial visualization
+latitude on y
+longitude on x
+
+# geom_smooth for line for scatterplot
+method=lm for line of best fit
+
+# line chart
+geom_line()
