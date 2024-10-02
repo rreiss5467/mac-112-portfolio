@@ -20,6 +20,7 @@ book:
       - activities/activity_05.qmd
       - activities/activity_06.qmd
       - activities/activity_07.qmd
+      - activities/activity_08.qmd
   
     - part: journal
       chapters: 
