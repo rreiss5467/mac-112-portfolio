@@ -1,0 +1,13 @@
+---
+Title: "Wrangling Verbs"
+Author: Robert Reiss
+Date: 10-1-24
+---
+
+## The 6 main verbs
+arrange = arrange the rows according to a certain column
+filter = filter out a subset of the rows
+select 
+mutate = mutate/create a column
+summarize = calculate a numerical summary of a column
+group_by = group rows by a specified column
