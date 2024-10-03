@@ -1,0 +1,50 @@
+---
+Title: "Wrangling Practice"
+Author: Robert Reiss
+Date: 10-3-24
+---
+```{r}
+library(tidyverse)
+penguins <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-28/penguins.csv')
+
+# Check it out
+head(penguins)
+```
+
+```{r}
+# Get data on only Adelie penguins that weigh more than 4700g
+filter(penguins, "Adelie" < 4700)
+
+# Get data on penguin body mass only
+# Show just the first 6 rows
+penguins %>% 
+  select(body_mass_g) %>% 
+  head()
+
+# Sort the penguins from smallest to largest body mass
+# Show just the first 6 rows
+penguins %>% 
+  arrange(body_mass_g) %>% 
+  head()
+
+
+# Calculate the average body mass across all penguins
+# Note: na.rm = TRUE removes the NAs from the calculation
+penguins %>% 
+  summarize(mean = mean(body_mass_g, na.rm = TRUE))
+
+
+# Calculate the average body mass by species
+penguins %>% 
+  group_by(species) %>% 
+  summarize(mean = mean(body_mass_g, na.rm = TRUE))
+
+
+# Create a new column that records body mass in kilograms, not grams
+# NOTE: there are 1000 g in 1 kg
+# Show just the first 6 rows
+penguins %>% 
+  mutate(body_mass_kg = body_mass_g/1000) %>% 
+  head()
+```
+
