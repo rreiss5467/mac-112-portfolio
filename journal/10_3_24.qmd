@@ -3,6 +3,9 @@ Title: "Wrangling Practice"
 Author: Robert Reiss
 Date: 10-3-24
 ---
+
+
+# some exercises
 ```{r}
 library(tidyverse)
 penguins <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-28/penguins.csv')
@@ -46,5 +49,31 @@ penguins %>%
 penguins %>% 
   mutate(body_mass_kg = body_mass_g/1000) %>% 
   head()
+```
+## is.na()
+
+# missing value in one column
+```{r}
+penguins %>% 
+  is.na()
+```
+
+# missing values in each column
+```{r}
+penguins %>% 
+  is.na() %>% 
+  colSums() %>% 
+  table
+
+# number of columns with __ missing values
+```
+
+
+# missing values in each row
+```{r}
+penguins %>% 
+  is.na() %>% 
+  rowSums() %>% 
+  table()
 ```
 
