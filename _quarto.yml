@@ -22,6 +22,7 @@ book:
       - activities/activity_07.qmd
       - activities/activity_08.qmd
       - activities/activity_09.qmd
+      - activities/activity_10.qmd
   
     - part: journal
       chapters: 
@@ -36,6 +37,7 @@ book:
         - journal/9_27_24.qmd
         - journal/10_1_24.qmd
         - journal/10_3_24.qmd
+        - journal/10_7_24.qmd
     
     - part: notes/README.qmd
       chapters: 

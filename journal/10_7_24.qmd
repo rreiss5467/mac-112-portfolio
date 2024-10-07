@@ -1,0 +1,13 @@
+---
+Title: "Notes on Reshaping Data"
+Author: Robert Reiss
+Date: 10-07-24
+---
+
+pivot_longer = longer shape of table 
+
+pivot_wider = wider shape of table
+
+pivot_wider(col.name = ____, values = ____)
+
+pivot_longer(combine_col = )
