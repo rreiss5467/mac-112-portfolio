@@ -7,6 +7,7 @@ df1 %>%
   left_join(df2)
 combines two datasets into one table--4 columns into 3
   - prioritizes left one (df1)
+  - keeps the rows from the left one 
 
 df1 %>% 
   inner_join(df2)
@@ -19,7 +20,7 @@ combines two datasets into one table
   - prioritizes both equally
   
 semi_join()
-- only prioritizes the vars in common between datasets
+- only prioritizes the rows in common between datasets
 
 anti_join()
-- prioritizes the vars included exclusively in df1
+- prioritizes the rows included exclusively in df1
