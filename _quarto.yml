@@ -41,6 +41,7 @@ book:
         - journal/10_3_24.qmd
         - journal/10_7_24.qmd
         - journal/10_10_24.qmd
+        - journal/10_20_24.qmd
     
     - part: notes/README.qmd
       chapters: 

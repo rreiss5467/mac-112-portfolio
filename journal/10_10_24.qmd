@@ -1,6 +1,6 @@
 ---
-Title:"Joining Data Notes"
-Author: Robert Reiss
+Title: "Joining Data Notes"
+Author: Robert Reiss 
 Date: 10-10-2024
 ---
 df1 %>% 

@@ -633,7 +633,7 @@ courses %>%
 What's the grade-point average (GPA) for each student?
 
 ```{r}
-grades %>% 
+
   
 ```
 
