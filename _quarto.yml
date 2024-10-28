@@ -26,6 +26,7 @@ book:
       - activities/activity_11.qmd
       - activities/activity_12.qmd
       - activities/activity_13.qmd
+      - activities/activity_15.qmd
   
     - part: journal
       chapters: 
